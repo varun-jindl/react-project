@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  background-color: #f9f9f9;
+  font-family: "Red Hat Text", sans-serif;
+  color: #1a1a1a;
+  font-size: 16px;
+}
+
+html[lang^="ja"] body,
+html[lang^="zh"] body,
+html[lang^="ko"] body {
+  line-break: strict;
+  overflow-wrap: normal;
+  word-break: break-all;
+}
+
+.skipContentBtn a {
+  display: inline-block;
+  margin-left: 43px;
+  text-align: center;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  z-index: 99999;
+}
+
+.skipContentBtn > a:focus {
+  transform: translateY(0%);
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 16px;
+  font-family: "Red Hat Text", sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1em;
+  margin: 0 0 16px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+th {
+  text-align: left;
+}
+
+ul,
+ol {
+  margin: 0 0 1.4rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+ul.noList {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code {
+  vertical-align: bottom;
+}
+
+blockquote {
+  border-left: 2px solid;
+  margin: 0 0 1.4rem;
+  padding-left: 0.7rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+img {
+  font-size: 0.583rem;
+  vertical-align: middle;
+  word-break: normal;
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/* ------------------------------
+   BUTTONS
+-------------------------------*/
+button,
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.15s linear;
+  white-space: normal;
+  line-height: normal;
+  min-width: 154px;
+}
+
+button:disabled,
+.button:disabled,
+button:disabled:hover,
+.button:disabled:hover {
+  background-color: #d0d0d0;
+  border-color: #d0d0d0;
+  color: #000;
+  cursor: not-allowed;
+}
+
+/* No button style */
+.noButton,
+.noButton:hover,
+.noButton:focus,
+.noButton:active {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: initial;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  transition: none;
+}
+
+/* ------------------------------
+   FORMS
+-------------------------------*/
+form {
+  margin-bottom: 20px;
+}
+
+.hsFormField {
+  margin-bottom: 16px;
+}
+
+form label {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+form label:empty {
+  display: none;
+}
+
+form label > span:empty {
+  display: none;
+}
+
+form select {
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.formTitle {
+  margin-bottom: 0;
+}
+
+form legend {
+  font-size: 0.875rem;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="search"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 14px 16px;
+  width: 100%;
+  font-weight: 400;
+  outline: 0;
+  letter-spacing: 0.3px;
+  min-height: 54px;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="search"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
+form select:focus,
+form textarea:focus {
+  background: #f9f9f9;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form fieldset {
+  max-width: 100% !important;
+}
+
+form select {
+  cursor: pointer;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  cursor: pointer;
+  margin-right: 0.35rem;
+}
+
+form input[type="file"] {
+  background-color: transparent;
+  border: initial;
+  padding: initial;
+}
+
+form input[type="submit"] {
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.topContent {
+  max-width: 767px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.topContent > *:last-child {
+  margin-bottom: 0;
+}
+
+.topContent .heading {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .topContent {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+  .container {
+  padding: 0 16px;
+  }
+}
+
+
+.eyebrowText {
+  border-color: currentColor;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid;
+}
+
+
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryButton {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: #fff;
+  background: transparent;
+}
+
+.primaryButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  border: 2px solid #384b74;
+  color: #384b74;
+  background: transparent;
+}
+
+.secondaryButton:hover {
+  background: #384b74;
+    color: #fff;
+  border-color: #384b74;
+  transform: translateY(-2px);
+}
+
+.button .buttonIcon {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.button .iconInitial,
+.button .iconHover {
+  position: absolute;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button .iconInitial {
+  transform: translate(0, 0);
+}
+
+.button .iconHover {
+  transform: translate(-25px, 25px);
+}
+
+.button:hover .iconInitial {
+  transform: translate(25px, -25px);
+}
+
+.button:hover .iconHover {
+  transform: translate(0, 0);
+}

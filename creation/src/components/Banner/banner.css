@@ -1,0 +1,139 @@
+.heroBannerWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+  min-height: 600px;
+}
+
+.heroBannerWrapper .bannerBackgroundCollection {
+  pointer-events: none;
+}
+
+.heroBannerWrapper .bannerBackgroundVariant,
+.heroBannerWrapper .bannerBackgroundOverlay{
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.heroBannerWrapper .bannerBackgroundVariant{
+  z-index: 6;
+}
+
+.heroBannerWrapper .bannerBackgroundOverlay {
+  background-image: linear-gradient(90deg,rgba(30, 42, 71, 0.94),rgba(30, 42, 71, .75) 54.33%,rgba(56, 75, 116, 0));
+  z-index: 7;
+  width: 60.5%;
+}
+
+.heroBannerWrapper .bannerBackgroundVariant{
+    background-image: url('/bannerImages/Banner\ Image.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.heroBannerWrapper .container {
+  position: relative;
+  z-index: 9;
+}
+
+.heroBannerWrapper .bannerContentColumn {
+  position: relative;
+}
+
+.heroBannerWrapper .bannerContentColumn.customWidth {
+  max-width: 700px;
+}
+
+.heroBannerWrapper .bannerColumnInner {
+  position: relative;
+}
+
+.heroBannerWrapper .eyebrowText {
+  color: #ffffff;
+}
+
+.heroBannerWrapper .bannerTitleTag {
+  color: #ffffff;
+  margin-bottom: 35px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heroBannerWrapper .bannerDescription {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.heroBannerWrapper .bannerDescription * {
+  color: inherit;
+}
+
+.heroBannerWrapper .bannerDescription > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .heroBannerWrapper {
+    padding-bottom: 60px;
+    padding-top: 100px;
+    min-height: 500px;
+  }
+
+  .heroBannerWrapper .bannerTitleTag {
+    margin-bottom: 16px;
+    font-size: 36px;
+  }
+
+  .heroBannerWrapper .bannerDescription {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .heroBannerWrapper .eyebrowText {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .heroBannerWrapper .container {
+    flex-direction: column;
+  }
+
+  .heroBannerWrapper .bannerContentColumn,
+  .heroBannerWrapper .bannerContentColumn.singleColumn {
+    width: 100%;
+  }
+
+  .heroBannerWrapper .bannerColumn {
+    align-self: start;
+    width: 100%;
+  }
+
+  .heroBannerWrapper .bannerBackgroundOverlay {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroBannerWrapper .bannerTitleTag {
+    font-size: 28px;
+  }
+
+  .heroBannerWrapper .bannerDescription {
+    font-size: 15px;
+  }
+}

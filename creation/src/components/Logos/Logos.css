@@ -1,0 +1,133 @@
+.logoSliderWrapper {
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.logoSliderWrapper .logoSliderTopContentWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.logoSliderWrapper .logoSliderOverlayBackground {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logoSliderWrapper .logoSliderMainContentWrapper {
+  position: relative;
+  z-index: 9;
+}
+
+.logoSliderWrapper .logoSliderMainContent {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoSliderWrapper .buttonWrap{
+text-align: center;
+}
+
+.logoSliderWrapper .sliderTrack {
+  display: flex;
+  gap: 30px;
+  animation: scroll 8s linear infinite;
+  width: fit-content;
+}
+
+.logoSliderWrapper .sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logoSliderWrapper .logoSlide {
+  align-items: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 210px;
+  padding: 30px;
+  flex-shrink: 0;
+  width: 280px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.logoSliderWrapper .logoSlide:hover {
+  border-color: #1e2a47;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logoSliderWrapper .logoSlide img {
+  flex-shrink: 0;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.logoSliderWrapper .logoSlide:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .logoSliderWrapper .sliderTrack {
+    gap: 20px;
+  }
+
+  .logoSliderWrapper .logoSlide {
+    width: 240px;
+    min-height: 180px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logoSliderWrapper {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  .logoSliderWrapper .logoSlide {
+    min-height: 200px;
+    width: 220px;
+    padding: 20px;
+  }
+
+  .logoSliderWrapper .sliderTrack {
+    gap: 15px;
+  }
+  .logoSliderWrapper .buttonWrap{
+text-align: left;
+}
+
+}
+
+@media (max-width: 480px) {
+  .logoSliderWrapper .logoSlide {
+    width: 200px;
+    min-height: 160px;
+  }
+}
